@@ -10,7 +10,7 @@ INEC Ecuador).
 > **$838**. Y ese ingreso casi nunca lo aporta una sola persona: el hogar tiene
 > **1,83 perceptores**.
 
-🔗 **Sitio con gráficos:** publica la carpeta `docs/` en GitHub Pages.
+🔗 **Sitio con gráficos:** **[luisreinoso.dev/enighur-2025-analisis](https://luisreinoso.dev/enighur-2025-analisis/)**
 
 ---
 
