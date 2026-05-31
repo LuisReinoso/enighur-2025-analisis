@@ -1,0 +1,13 @@
+# Microdatos crudos del INEC (pesados, se descargan con scripts/01_download.sh)
+# Solo el data/ de la raíz; docs/data/ (resultados del sitio) SÍ se versiona.
+/data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+.playwright-mcp/

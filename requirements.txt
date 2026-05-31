@@ -1,0 +1,3 @@
+# El analisis principal (scripts/02_analysis.py) usa solo la libreria estandar.
+# openpyxl solo se necesita si quieres inspeccionar los diccionarios .xlsx.
+openpyxl>=3.1

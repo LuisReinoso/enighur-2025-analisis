@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "fuente": "ENIGHUR 2024-2025, INEC Ecuador",
+    "licencia": "CC BY 4.0",
+    "url": "https://www.ecuadorencifras.gob.ec/encuesta-nacional-de-ingresos-y-gastos-de-los-hogares-urbanos-y-rurales/",
+    "muestra_viviendas": 41184,
+    "hogares_expandidos": 5461665,
+    "personas_expandidas": 18091905,
+    "salario_basico_2024_2025": 470
+  },
+  "hogar": {
+    "hogares_muestra": 35398,
+    "hogares_expandidos": 5461665,
+    "media": 1135.45,
+    "mediana": 838.35,
+    "p10": 340.25,
+    "p25": 520.43,
+    "p75": 1382.19,
+    "p90": 2211.83,
+    "media_monetario": 889.02,
+    "pct_alcanza_media": 34.2,
+    "pct_bajo_media": 65.8,
+    "media_sin_top10": 874.05,
+    "pct_sobre_salario_basico": 79.6
+  },
+  "quintiles": {
+    "grupos": [
+      {
+        "quintil": "Q1",
+        "ingreso_medio": 330.75,
+        "ingreso_mediano": 340.31,
+        "gasto_medio": 337.21,
+        "balance": -6.46,
+        "tasa_ahorro_pct": -2.0,
+        "gasto_sobre_ingreso_pct": 102.0,
+        "pct_ingreso_nacional": 5.8,
+        "pct_gasto_nacional": 7.3,
+        "tam_hogar": 2.37,
+        "per_capita": 139.49
+      },
+      {
+        "quintil": "Q2",
+        "ingreso_medio": 577.81,
+        "ingreso_mediano": 576.03,
+        "gasto_medio": 557.29,
+        "balance": 20.52,
+        "tasa_ahorro_pct": 3.6,
+        "gasto_sobre_ingreso_pct": 96.4,
+        "pct_ingreso_nacional": 10.2,
+        "pct_gasto_nacional": 12.0,
+        "tam_hogar": 3.09,
+        "per_capita": 186.88
+      },
+      {
+        "quintil": "Q3",
+        "ingreso_medio": 843.55,
+        "ingreso_mediano": 838.42,
+        "gasto_medio": 765.77,
+        "balance": 77.77,
+        "tasa_ahorro_pct": 9.2,
+        "gasto_sobre_ingreso_pct": 90.8,
+        "pct_ingreso_nacional": 14.9,
+        "pct_gasto_nacional": 16.5,
+        "tam_hogar": 3.46,
+        "per_capita": 243.81
+      },
+      {
+        "quintil": "Q4",
+        "ingreso_medio": 1253.33,
+        "ingreso_mediano": 1236.38,
+        "gasto_medio": 1052.21,
+        "balance": 201.12,
+        "tasa_ahorro_pct": 16.0,
+        "gasto_sobre_ingreso_pct": 84.0,
+        "pct_ingreso_nacional": 22.1,
+        "pct_gasto_nacional": 22.6,
+        "tam_hogar": 3.73,
+        "per_capita": 335.9
+      },
+      {
+        "quintil": "Q5",
+        "ingreso_medio": 2672.5,
+        "ingreso_mediano": 2212.55,
+        "gasto_medio": 1938.57,
+        "balance": 733.94,
+        "tasa_ahorro_pct": 27.5,
+        "gasto_sobre_ingreso_pct": 72.5,
+        "pct_ingreso_nacional": 47.1,
+        "pct_gasto_nacional": 41.7,
+        "tam_hogar": 3.91,
+        "per_capita": 683.75
+      }
+    ],
+    "ratio_q5_q1": 8.1,
+    "reparto_personas": [
+      {
+        "quintil": "Q1",
+        "pct_personas": 14.3
+      },
+      {
+        "quintil": "Q2",
+        "pct_personas": 18.7
+      },
+      {
+        "quintil": "Q3",
+        "pct_personas": 20.9
+      },
+      {
+        "quintil": "Q4",
+        "pct_personas": 22.5
+      },
+      {
+        "quintil": "Q5",
+        "pct_personas": 23.6
+      }
+    ],
+    "nacional": {
+      "ingreso_medio": 1135.45,
+      "gasto_medio": 930.12,
+      "balance": 205.33,
+      "tasa_ahorro_pct": 18.1
+    },
+    "por_persona": {
+      "grupos": [
+        {
+          "quintil": "Q1",
+          "ingreso_per_capita": 101.43,
+          "gasto_per_capita": 101.78,
+          "tasa_ahorro_pct": -0.3,
+          "pct_ingreso_nacional": 5.9
+        },
+        {
+          "quintil": "Q2",
+          "ingreso_per_capita": 168.78,
+          "gasto_per_capita": 159.55,
+          "tasa_ahorro_pct": 5.5,
+          "pct_ingreso_nacional": 9.9
+        },
+        {
+          "quintil": "Q3",
+          "ingreso_per_capita": 244.75,
+          "gasto_per_capita": 217.46,
+          "tasa_ahorro_pct": 11.2,
+          "pct_ingreso_nacional": 14.3
+        },
+        {
+          "quintil": "Q4",
+          "ingreso_per_capita": 365.73,
+          "gasto_per_capita": 305.0,
+          "tasa_ahorro_pct": 16.6,
+          "pct_ingreso_nacional": 21.3
+        },
+        {
+          "quintil": "Q5",
+          "ingreso_per_capita": 833.28,
+          "gasto_per_capita": 620.21,
+          "tasa_ahorro_pct": 25.6,
+          "pct_ingreso_nacional": 48.6
+        }
+      ],
+      "ratio_q5_q1": 8.2
+    }
+  },
+  "perceptores": {
+    "promedio_por_hogar": 1.83,
+    "distribucion_pct": {
+      "0": 0.1,
+      "1": 41.7,
+      "2": 40.5,
+      "3": 12.1,
+      "4+": 5.6
+    }
+  },
+  "ingreso_individual": {
+    "perceptores_con_ingreso": 7077991,
+    "media": 512.74,
+    "mediana": 425.59,
+    "p25": 238.33,
+    "p75": 600.0,
+    "p90": 957.73,
+    "p95": 1306.67,
+    "p99": 2493.25,
+    "umbrales": [
+      {
+        "umbral": 470,
+        "personas": 2972256,
+        "pct": 42.0
+      },
+      {
+        "umbral": 800,
+        "personas": 1024557,
+        "pct": 14.5
+      },
+      {
+        "umbral": 1000,
+        "personas": 646857,
+        "pct": 9.1
+      },
+      {
+        "umbral": 1200,
+        "personas": 425291,
+        "pct": 6.0
+      },
+      {
+        "umbral": 2000,
+        "personas": 133229,
+        "pct": 1.9
+      },
+      {
+        "umbral": 3000,
+        "personas": 46109,
+        "pct": 0.7
+      }
+    ]
+  },
+  "ayuda_otros_hogares": {
+    "total_mensual_usd": 140593696,
+    "hogares_que_dan": 1079526,
+    "pct_hogares_que_dan": 19.8,
+    "promedio_entre_quienes_dan": 130.24,
+    "mediana_entre_quienes_dan": 70.0
+  }
+}

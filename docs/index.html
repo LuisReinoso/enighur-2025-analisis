@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿El hogar ecuatoriano promedio gana $1.135 al mes? — ENIGHUR 2024-2025</title>
+  <meta name="description" content="Análisis reproducible de los microdatos abiertos ENIGHUR 2024-2025 del INEC: la media engaña, el hogar lo sostienen ~2 perceptores y solo el 6% gana $1.200 por sí solo.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">ENIGHUR 2024-2025 · INEC Ecuador · datos abiertos CC BY 4.0</p>
+  <h1>¿El hogar ecuatoriano promedio gana <span class="hl">$1.135</span> al mes?</h1>
+  <p class="lede">
+    Técnicamente sí. Pero la media engaña: la mitad de los hogares gana menos de
+    <strong>$838</strong>, y ese ingreso casi nunca lo aporta
+    <strong>una sola persona</strong> — apenas <strong>6%</strong> de quienes
+    trabajan gana $1.200 por sí solo.
+  </p>
+</header>
+
+<main>
+  <!-- Mensaje central -->
+  <section class="card thesis">
+    <p class="big">
+      <strong id="t-bajo"></strong> de los hogares gana <strong>menos</strong>
+      que el "promedio" de <strong id="t-media"></strong>.
+    </p>
+    <p>
+      Quita solo al <strong>10% más rico</strong> y ese promedio se desploma a
+      <strong id="t-sintop"></strong>. La media no describe al hogar común: lo
+      infla un puñado de hogares de altos ingresos. El número honesto para el
+      hogar típico es la <strong>mediana: <span id="t-mediana"></span></strong>.
+    </p>
+  </section>
+
+  <!-- Bloque 1: la media engaña -->
+  <section class="card">
+    <h2>La media engaña</h2>
+    <p>
+      El promedio se infla con los hogares de altos ingresos. El hogar
+      <em>típico</em> (la mediana) gana mucho menos: solo
+      <strong id="pct-media"></strong> de los hogares alcanza la media.
+    </p>
+    <div class="stat-row">
+      <div class="stat"><span class="num" id="s-media"></span><span class="lbl">Media</span></div>
+      <div class="stat hl"><span class="num" id="s-mediana"></span><span class="lbl">Mediana (típico)</span></div>
+      <div class="stat"><span class="num" id="s-p90"></span><span class="lbl">Percentil 90</span></div>
+    </div>
+  </section>
+
+  <!-- Bloque 2: brecha (concentración + ingreso/gasto per cápita) -->
+  <section class="card">
+    <h2>Una brecha enorme</h2>
+    <p>
+      Ordenando a las personas por ingreso per cápita en 5 grupos iguales (20%
+      de la población cada uno), el quintil más rico se lleva
+      <strong id="q5pc-share"></strong> de <em>todo</em> el ingreso del país —
+      casi tanto como el otro 80% junto, y <strong id="ratio-pc"></strong> veces
+      lo que recibe el más pobre.
+    </p>
+    <div class="chart-wrap"><canvas id="chartShare"></canvas></div>
+    <p class="cap">% del ingreso nacional que recibe cada quintil de personas.</p>
+  </section>
+
+  <!-- Bloque 3: ingresos vs egresos per cápita -->
+  <section class="card">
+    <h2>Quién ahorra y quién se endeuda</h2>
+    <p>
+      Comparando lo que cada quintil <em>gana</em> contra lo que <em>gasta</em>
+      (per cápita), el patrón es regresivo: el 20% más pobre vive con
+      <strong id="q1pc-ing"></strong> por persona al mes y gasta
+      <strong>todo</strong> lo que tiene; el 20% más rico dispone de
+      <strong id="q5pc-ing"></strong> y aún ahorra
+      <strong id="q5pc-ahorro"></strong>. El ahorro es un lujo de los de arriba.
+    </p>
+    <div class="chart-wrap"><canvas id="chartPcIng"></canvas></div>
+    <p class="cap">Ingreso vs gasto <strong>per cápita</strong> mensual por quintil (USD).</p>
+  </section>
+
+  <!-- Bloque 4: perceptores -->
+  <section class="card">
+    <h2>No lo gana una sola persona</h2>
+    <p>
+      El hogar promedio tiene <strong id="prom-perc"></strong> perceptores
+      (personas que aportan ingreso): en la práctica, casi siempre hace falta
+      <strong>más de un sueldo</strong>. Solo 4 de cada 10 hogares se sostienen
+      con un único perceptor; el resto suma dos o más, además de transferencias
+      y rentas.
+    </p>
+    <div class="chart-wrap small"><canvas id="chartPerc"></canvas></div>
+    <p class="cap">Hogares según número de perceptores de ingreso.</p>
+  </section>
+
+  <!-- Bloque 3: ganar 1200 -->
+  <section class="card">
+    <h2>Ganar $1.200 uno solo es raro</h2>
+    <p>
+      Mirando el ingreso laboral <em>por persona</em>: la mediana es
+      <strong id="ind-mediana"></strong>/mes. Solo
+      <strong id="ind-1200"></strong> personas
+      (<strong id="ind-1200-pct"></strong> de quienes trabajan) ganan $1.200 o
+      más por su cuenta.
+    </p>
+    <div class="chart-wrap"><canvas id="chartUmbral"></canvas></div>
+    <p class="cap">% de perceptores (con ingreso laboral &gt; 0) que ganan al menos cada umbral.</p>
+  </section>
+
+  <!-- Bloque 4: ayuda -->
+  <section class="card accent">
+    <h2>La ayuda invisible entre hogares</h2>
+    <p>
+      El dato que originó este proyecto: los hogares transfieren
+      <strong id="ayuda-total"></strong> al mes a otros hogares e instituciones
+      (código ENIGHUR <code>2009006</code>).
+    </p>
+    <div class="stat-row">
+      <div class="stat"><span class="num" id="a-total"></span><span class="lbl">USD/mes en ayuda</span></div>
+      <div class="stat"><span class="num" id="a-pct"></span><span class="lbl">de hogares da ayuda</span></div>
+      <div class="stat"><span class="num" id="a-prom"></span><span class="lbl">promedio por hogar</span></div>
+    </div>
+    <p class="cap">
+      Casi todo es transferencia entre hogares (ayuda a familiares): las
+      donaciones recibidas de instituciones son apenas $1,3M/mes.
+    </p>
+  </section>
+
+  <section class="card method">
+    <h2>Cómo se hizo</h2>
+    <p>
+      100% reproducible a partir de los microdatos oficiales. Todas las cifras se
+      ponderan con el factor de expansión <code>Fexp</code>.
+    </p>
+    <pre><code>bash scripts/01_download.sh      # baja y verifica los datos del INEC
+python3 scripts/02_analysis.py   # genera resumen.json</code></pre>
+    <p>
+      Código y método: <a id="repo-link" href="#">repositorio en GitHub</a> ·
+      Datos:
+      <a href="https://www.ecuadorencifras.gob.ec/encuesta-nacional-de-ingresos-y-gastos-de-los-hogares-urbanos-y-rurales/">ENIGHUR 2024-2025 (INEC)</a>,
+      licencia CC BY 4.0.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    Fuente: <strong>ENIGHUR 2024-2025</strong>, INEC Ecuador ·
+    <span id="meta-muestra"></span> ·
+    Análisis bajo licencia MIT, datos CC BY 4.0.
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
