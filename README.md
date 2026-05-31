@@ -7,9 +7,8 @@ INEC Ecuador).
 > **TL;DR** — El INEC publica que el hogar promedio gana **$1.135/mes**, pero ese
 > promedio no representa la realidad: **65,8%** de los hogares gana *menos*. Quita
 > solo al 10% más rico y la media cae a **$874**. El hogar típico (mediana) gana
-> **$838**. Además, ese ingreso casi nunca lo aporta una sola persona (el hogar
-> tiene **1,83 perceptores**) y apenas **6% de quienes trabajan** gana $1.200 por
-> sí solo.
+> **$838**. Y ese ingreso casi nunca lo aporta una sola persona: el hogar tiene
+> **1,83 perceptores**.
 
 🔗 **Sitio con gráficos:** publica la carpeta `docs/` en GitHub Pages.
 
@@ -67,24 +66,7 @@ quintil = 20% de la población), aparece la desigualdad detrás del promedio:
 - Un perceptor gana en promedio ~$513 de trabajo; se necesitan **~2** sumados
   (más transferencias y rentas) para llegar al ingreso del hogar.
 
-### 4. Ganar $1.200 uno solo es raro: solo el 6%
-
-Ingreso laboral por persona (perceptores con ingreso > 0; 7,08 millones):
-
-| Métrica | USD/mes |
-|---|---|
-| Media | $513 |
-| Mediana | **$426** |
-| Ganan ≥ $470 (salario básico) | 42% |
-| Ganan ≥ $800 | 14,5% |
-| Ganan ≥ $1.000 | 9,1% |
-| **Ganan ≥ $1.200** | **6,0% — 425.291 personas** |
-| Ganan ≥ $2.000 | 1,9% |
-
-Solo **425.291 personas** ganan $1.200 o más por su trabajo (~2,3% de la
-población total de 18,1 millones).
-
-### 5. "Ayuda con dinero a otros hogares" — la redistribución informal
+### 4. "Ayuda con dinero a otros hogares" — la redistribución informal
 
 El dato que originó este proyecto (código ENIGHUR `2009006`):
 

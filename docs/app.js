@@ -25,7 +25,7 @@ fetch("data/resumen.json")
   });
 
 function render(d) {
-  const h = d.hogar, ind = d.ingreso_individual, a = d.ayuda_otros_hogares;
+  const h = d.hogar, a = d.ayuda_otros_hogares;
   const pp = d.quintiles.por_persona, ppg = pp.grupos, q5 = ppg[4];
 
   // --- Mensaje central ---
@@ -120,41 +120,7 @@ function render(d) {
     },
   });
 
-  // --- Bloque 5: % que gana al menos cada umbral ---
-  text("ind-mediana", fmtUSD(ind.mediana));
-  const u1200 = ind.umbrales.find((x) => x.umbral === 1200);
-  text("ind-1200", fmtNum(u1200.personas));
-  text("ind-1200-pct", fmtPct(u1200.pct));
-  new Chart(document.getElementById("chartUmbral"), {
-    type: "bar",
-    data: {
-      labels: ind.umbrales.map((u) => "≥ " + fmtUSD(u.umbral)),
-      datasets: [{
-        label: "% de perceptores",
-        data: ind.umbrales.map((u) => u.pct),
-        backgroundColor: ind.umbrales.map((u) => (u.umbral === 1200 ? C.hl : C.accent)),
-        borderRadius: 6,
-      }],
-    },
-    options: {
-      indexAxis: "y",
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: (c) => {
-              const u = ind.umbrales[c.dataIndex];
-              return `${fmtPct(u.pct)} — ${fmtNum(u.personas)} personas`;
-            },
-          },
-        },
-      },
-      scales: { x: { ticks: { callback: (v) => v + "%" }, max: 100 } },
-    },
-  });
-
-  // --- Bloque 6: ayuda a otros hogares ---
+  // --- Bloque 5: ayuda a otros hogares ---
   text("ayuda-total", fmtUSD(a.total_mensual_usd));
   text("a-total", fmtUSD(a.total_mensual_usd));
   text("a-pct", fmtPct(a.pct_hogares_que_dan));
